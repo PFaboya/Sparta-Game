@@ -1,0 +1,23 @@
+h1{
+  text-align: center;
+}
+.game-screen{
+  height: 700px;
+  background-image: linear-gradient(to bottom, lightblue 70%, green);
+}
+
+.menu, .player-Info{
+  background-color: green;
+}
+
+.menu{
+  height:76px;
+}
+
+.start{
+  background-color: lightgreen;
+}
+
+.player-Info{
+  font-size: 20px;
+}
