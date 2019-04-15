@@ -65,10 +65,15 @@ document.addEventListener("DOMContentLoaded", function(event){
         endGame.innerHTML = "Time is Up Your Score is " + points;
         endGame.style.color = "red";
         endGame.style.fontSize = "95px";
+        var res = document.getElementsByClassName("again")[0];
+        res.className = "col-lg-6 col-md-6 text-center again";
+        document.getElementsByClassName("menu")[0].className = "hidden-lg hidden-md hidden-sm"
+        document.getElementById("reset").addEventListener("click", function(){
+          location.reload()
+        })
       };
     }, 1000)
   // countDown()
-
   })
 
 
