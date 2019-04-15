@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function(event){
         var elem = document.getElementsByClassName("deer")[0];
         obstacle.className = "col-lg-1 col-md-1 col-sm-1 bush";
         elem.className = "col-lg-1 col-md-1 col-sm-1 deer";
-        // elem.style.position =
         speed = 0.5;
         currentPos = -500;
         // Reset the element
@@ -41,8 +40,15 @@ document.addEventListener("DOMContentLoaded", function(event){
   }
 
   function mouseClick(){
+    var points = 0
+    // document.getElementById("points").innerHTML = points
     document.getElementById("game-screen").style.cursor = "crosshair";
-
+    var hit = document.getElementsByClassName("deer")[0]
+    hit.addEventListener("click", function(){
+      console.log("it works")
+      points += 10
+      document.getElementById("points").innerHTML = points
+    })
   }
 
   startGame()
