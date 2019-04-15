@@ -1,6 +1,7 @@
 h1{
   text-align: center;
 }
+
 #game-screen{
   height: 700px;
   background-image: linear-gradient(to bottom, lightblue 60%, green);
@@ -10,12 +11,15 @@ h1{
   background-color: red;
   height:30px;
   position: relative;
-  left: 550px
+  left: 575px
 }
 
 .bush{
-  background-color: orange;
+  background-image: url(../images/bush.png);
+  background-size: cover;
+  background-position: center;
   height:120px;
+  width:150px;
   position:relative;
   top: 420px;
   left: 452.5px;

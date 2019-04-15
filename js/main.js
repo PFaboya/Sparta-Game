@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
   var button = document.getElementById("start")
   button.addEventListener("click", function(){
-    var timeleft = 3;
+    var timeleft = 30;
     var timer = setInterval(function(){
       if (timeleft >= 1){
         document.getElementById("time").innerHTML = timeleft - 1;
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         var endGame = document.getElementById("game-screen");
         endGame.innerHTML = "Time is Up Your Score is " + points;
         endGame.style.color = "red";
-        endGame.style.fontSize = "95px";
+        endGame.style.fontSize = "90px";
         var res = document.getElementsByClassName("again")[0];
         res.className = "col-lg-6 col-md-6 text-center again";
         document.getElementsByClassName("menu")[0].className = "hidden-lg hidden-md hidden-sm"
