@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   function startGame(){
     var button = document.getElementById("start");
     button.addEventListener("click", function(){
-      button.value = "RESTART"
+      document.getElementsByClassName("menu")[0].innerHTML = ""
       var heading = document.getElementsByTagName("h2")
       for (var i = 0; i < heading.length; i++) {
        heading[i].innerHTML = ""
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function(event){
         elem.style.top = "auto";
         var motionInterval = setInterval(function() {
           currentPos += speed;
-          if (currentPos >= -400 && speed >= 0) {
-           currentPos = -400;
+          if (currentPos >= -350 && speed >= 0) {
+           currentPos = -350;
            speed = -1 * speed;
            // elem.style.width = parseInt(elem.style.width)*2+"px";
            // elem.style.height = parseInt(elem.style.height)*2+"px";
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   }
 
   function mouseClick(){
-    var points = 0
+    points = 0
     // document.getElementById("points").innerHTML = points
     document.getElementById("game-screen").style.cursor = "crosshair";
     var hit = document.getElementsByClassName("deer")[0]
@@ -50,6 +50,28 @@ document.addEventListener("DOMContentLoaded", function(event){
       document.getElementById("points").innerHTML = points
     })
   }
+
+  var button = document.getElementById("start")
+  button.addEventListener("click", function(){
+    var timeleft = 3;
+    var timer = setInterval(function(){
+      if (timeleft >= 1){
+        document.getElementById("time").innerHTML = timeleft - 1;
+      }
+      timeleft -= 1;
+      if(timeleft == 0){
+        console.log("3 sec up");
+        var endGame = document.getElementById("game-screen");
+        endGame.innerHTML = "Time is Up Your Score is " + points;
+        endGame.style.color = "red";
+        endGame.style.fontSize = "95px";
+      };
+    }, 1000)
+  // countDown()
+
+  })
+
+
 
   startGame()
   mouseClick()
