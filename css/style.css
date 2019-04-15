@@ -3,7 +3,22 @@ h1{
 }
 #game-screen{
   height: 700px;
-  background-image: linear-gradient(to bottom, lightblue 70%, green);
+  background-image: linear-gradient(to bottom, lightblue 60%, green);
+}
+
+.deer{
+  background-color: red;
+  height:30px;
+  position: relative;
+  left: 550px
+}
+
+.bush{
+  background-color: orange;
+  height:120px;
+  position:relative;
+  top: 420px;
+  left: 452.5px;
 }
 
 .menu, .player-Info{
@@ -14,7 +29,7 @@ h1{
   height:76px;
 }
 
-.start{
+#start{
   background-color: lightgreen;
 }
 
