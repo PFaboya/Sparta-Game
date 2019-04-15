@@ -1,7 +1,7 @@
 h1{
   text-align: center;
 }
-.game-screen{
+#game-screen{
   height: 700px;
   background-image: linear-gradient(to bottom, lightblue 70%, green);
 }
