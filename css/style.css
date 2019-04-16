@@ -4,14 +4,24 @@ h1{
 
 #game-screen{
   height: 700px;
-  background-image: linear-gradient(to bottom, lightblue 60%, green);
+  background-image: linear-gradient(to bottom, lightblue 30%, green);
 }
 
 .deer{
-  background-color: red;
-  height:30px;
+  background-image:url(../images/deer.gif);
+  background-size: cover;
+  background-position: center;
+  height:100px;
+}
+
+#deer1{
   position: relative;
-  left: 575px
+  left: 665px;
+}
+
+#deer2{
+  position: relative;
+  left:200px;
 }
 
 .bush{
@@ -20,9 +30,18 @@ h1{
   background-position: center;
   height:120px;
   width:150px;
+
+}
+
+#bush1{
   position:relative;
   top: 420px;
   left: 452.5px;
+}
+
+#bush2{
+  top:530px;
+  left:-70px;
 }
 
 .menu, .player-Info{
