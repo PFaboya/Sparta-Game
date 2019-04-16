@@ -24,6 +24,16 @@ h1{
   left:200px;
 }
 
+#deer3{
+  position: relative;
+  left: 700px;
+}
+
+#deer4{
+  position: relative;
+  left: -200px;
+}
+
 .bush{
   background-image: url(../images/bush.png);
   background-size: cover;
@@ -36,12 +46,25 @@ h1{
 #bush1{
   position:relative;
   top: 420px;
-  left: 452.5px;
+  left: 265px;
 }
 
 #bush2{
+  position: relative;
   top:530px;
-  left:-70px;
+  left:-260px;
+}
+
+#bush3{
+  position: relative;
+  top: 460px;
+  left: 190px;
+}
+
+#bush4{
+  position: relative;
+  top: 280px;
+  left: -760px;
 }
 
 .menu, .player-Info{
