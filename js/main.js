@@ -223,11 +223,16 @@ document.addEventListener("DOMContentLoaded", function(event){
   function mouseClick(){
     var deer = document.getElementsByClassName("deer");
     points = 0
-    document.getElementById("game-screen").style.cursor = "crosshair";
+    var scrn = document.getElementById("game-screen");
+    scrn.style.cursor = "crosshair";
+    scrn.addEventListener("click",function(){
+      var audio = new Audio();
+      audio.src = "sounds/Winchester12-RA_The_Sun_God-1722751268.mp3"; 
+      audio.play();
+    })
     for (var i = 0; i < deer.length; i++) {
       var deers = deer[i]
       deers.addEventListener("click", function(event){
-        console.log("it works");
         points += 10;
         document.getElementById("points").innerHTML = points;
         event.target.style.visibility = "hidden";
@@ -248,7 +253,6 @@ document.addEventListener("DOMContentLoaded", function(event){
         }
         timeleft -= 1;
         if(timeleft == 0){
-          console.log("3 sec up");
           var endGame = document.getElementById("game-screen");
           endGame.innerHTML = "Time is Up Your Score is " + points;
           endGame.style.color = "red";
