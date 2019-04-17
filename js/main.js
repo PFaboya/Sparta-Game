@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function(event){
       var disInterval = setInterval(function(){
       if(deer1.style.visibility = "visible"){
 
-        setTimeout(function(){ deer1.style.visibility = "hidden"; });
+        setTimeout(function(){ deer1.style.visibility = "hidden"; },);
       }
-    },4000)
+    }, 4000)
 
         var reappear = setInterval(function(){
           deer1.style.visibility = "visible";
@@ -144,10 +144,66 @@ document.addEventListener("DOMContentLoaded", function(event){
           deer4.style.visibility = "visible";
         },(Math.random() * 7000) + 3000);
       }
-      move1()
-      move2()
-      move3()
-      move4()
+      function move5() {
+        var deer5 = document.getElementById("deer5");
+        var tree5 = document.getElementById("tree5");
+
+        tree5.className = "col-lg-1 col-md-1 col-sm-1 tree";
+        deer5.className = "col-lg-1 col-md-1 col-sm-1 deer";
+        var currentPos = -140;
+        var upInterval1 = setInterval(up, 5);
+        function up(){
+
+          if (currentPos < -40) {
+            currentPos++
+          } else {
+            clearInterval(upInterval1);
+          }
+        deer5.style.right = currentPos+"px";
+        };
+        var disInterval = setInterval(function(){
+          if(deer5.style.visibility = "visible"){
+          setTimeout(function(){ deer5.style.visibility = "hidden"; });
+          }
+        },(Math.random() * 3000) + 1000)
+
+        var reappear = setInterval(function(){
+          deer5.style.visibility = "visible";
+        },(Math.random() * 7000) + 3000);
+      }
+      function move6() {
+        var deer6 = document.getElementById("deer6");
+        var tree6 = document.getElementById("tree6");
+
+        tree6.className = "col-lg-1 col-md-1 col-sm-1 tree";
+        deer6.className = "col-lg-1 col-md-1 col-sm-1 deer";
+        var currentPos = -490;
+        var upInterval1 = setInterval(up, 5);
+        function up(){
+
+          if (currentPos < -350) {
+            currentPos++
+          } else {
+            clearInterval(upInterval1);
+          }
+        deer6.style.right = currentPos+"px";
+        };
+        var disInterval = setInterval(function(){
+          if(deer6.style.visibility = "visible"){
+          setTimeout(function(){ deer6.style.visibility = "hidden"; });
+          }
+        },(Math.random() * 3000) + 1000)
+
+        var reappear = setInterval(function(){
+          deer6.style.visibility = "visible";
+        },(Math.random() * 7000) + 3000);
+      }
+      move1();
+      move2();
+      move3();
+      move4();
+      setTimeout(move5(), 5000);
+      setTimeout(move6(), 5000);
     })
   }
 
