@@ -44,12 +44,14 @@ document.addEventListener("DOMContentLoaded", function(event){
       //   }
       // }
       // deer1.style.bottom = currentPos+"px";
+      setTimeout(function(){
       var disInterval = setInterval(function(){
       if(deer1.style.visibility = "visible"){
 
-        setTimeout(function(){ deer1.style.visibility = "hidden"; },);
+         deer1.style.visibility = "hidden";
       }
-    }, 4000)
+    }, 1000)
+  }, 1000)
 
         var reappear = setInterval(function(){
           deer1.style.visibility = "visible";
@@ -80,11 +82,14 @@ document.addEventListener("DOMContentLoaded", function(event){
           }
           deer2.style.bottom = currentPos+"px";
         };
+        setTimeout(function(){
         var disInterval = setInterval(function(){
           if(deer2.style.visibility = "visible"){
-            setTimeout(function(){ deer2.style.visibility = "hidden"; });
+
+            deer2.style.visibility = "hidden";
           }
         },(Math.random() * 3000) + 1000)
+      }, 1000);
 
         var reappear = setInterval(function(){
           deer2.style.visibility = "visible";
@@ -108,14 +113,16 @@ document.addEventListener("DOMContentLoaded", function(event){
           }
         deer3.style.bottom = currentPos+"px";
         };
+        setTimeout(function(){
         var disInterval = setInterval(function(){
           if(deer3.style.visibility = "visible"){
-            setTimeout(function(){ deer3.style.visibility = "hidden"; });
+             deer3.style.visibility = "hidden";
           }
         },(Math.random() * 3000) + 1000)
         var reappear = setInterval(function(){
           deer3.style.visibility = "visible";
         },(Math.random() * 7000) + 3000);
+      }, 1000);
       }
       function move4() {
         var deer4 = document.getElementById("deer4");
@@ -134,11 +141,13 @@ document.addEventListener("DOMContentLoaded", function(event){
           }
         deer4.style.bottom = currentPos+"px";
         };
+        setTimeout(function(){
         var disInterval = setInterval(function(){
           if(deer4.style.visibility = "visible"){
-          setTimeout(function(){ deer4.style.visibility = "hidden"; });
+          deer4.style.visibility = "hidden";
           }
         },(Math.random() * 3000) + 1000)
+      }, 1000);
 
         var reappear = setInterval(function(){
           deer4.style.visibility = "visible";
@@ -154,18 +163,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         var upInterval1 = setInterval(up, 5);
         function up(){
 
-          if (currentPos < -40) {
+          if (currentPos < 50) {
             currentPos++
           } else {
             clearInterval(upInterval1);
           }
         deer5.style.right = currentPos+"px";
         };
+        setTimeout(function(){
         var disInterval = setInterval(function(){
           if(deer5.style.visibility = "visible"){
-          setTimeout(function(){ deer5.style.visibility = "hidden"; });
+          deer5.style.visibility = "hidden";
           }
         },(Math.random() * 3000) + 1000)
+      }, 1000);
 
         var reappear = setInterval(function(){
           deer5.style.visibility = "visible";
@@ -181,18 +192,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         var upInterval1 = setInterval(up, 5);
         function up(){
 
-          if (currentPos < -350) {
+          if (currentPos < -300) {
             currentPos++
           } else {
             clearInterval(upInterval1);
           }
         deer6.style.right = currentPos+"px";
         };
+        setTimeout(function(){
         var disInterval = setInterval(function(){
           if(deer6.style.visibility = "visible"){
-          setTimeout(function(){ deer6.style.visibility = "hidden"; });
+           deer6.style.visibility = "hidden";
           }
         },(Math.random() * 3000) + 1000)
+      }, 1000);
 
         var reappear = setInterval(function(){
           deer6.style.visibility = "visible";
@@ -202,8 +215,8 @@ document.addEventListener("DOMContentLoaded", function(event){
       move2();
       move3();
       move4();
-      setTimeout(move5(), 5000);
-      setTimeout(move6(), 5000);
+      move5();
+      move6();
     })
   }
 
