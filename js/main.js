@@ -14,36 +14,53 @@ document.addEventListener("DOMContentLoaded", function(event){
         // var elem = document.getElementById("deer1");
         bush1.className = "col-lg-1 col-md-1 col-sm-1 bush";
         deer1.className = "col-lg-1 col-md-1 col-sm-1 deer";
-        var speed = 1;
-        var currentPos = -440;
+        // var speed = 1;
         // Reset the element
-        deer1.style.bottom = 0+"px";
-        deer1.style.top = "auto";
-        var timeleft = 3;
-        var motionInterval1 = setInterval(function() {
-          currentPos += speed;
-          if (currentPos >= -340 && speed > 0) {
-            currentPos = -340;
-            speed = 0;
-          }
-          else if(currentPos == -340 && speed == 0 && timeleft >= 0){
-            currentPos = -340;
-            setInterval(function() {
-              timeleft -= 1;
-            }, 1000)
-            console.log(timeleft)
-          }
-          else if(timeleft == 0){
-            currentPos = -340;
-            speed = -1;
-          }
-          else if (currentPos <= -440 && speed < 0) {
-            currentPos = -440;
-            speed = -1 * speed;
+        // deer1.style.bottom = 0+"px";
+        // deer1.style.top = "auto";
+        var currentPos = -440;
+        var upInterval1 = setInterval(up, 5);
+        function up(){
+          // currentPos += 1;
+
+          if (currentPos < -340) {
+            // currentPos = -340;
+            currentPos++
+          } else {
+            clearInterval(upInterval1);
           }
 
+
         deer1.style.bottom = currentPos+"px";
-      });
+        // setTimeout(function(){deer1.style.visibility = "hidden"}, 2000)
+      };
+      // var downInterval1 = setInterval(down, 2);
+      // function down(){
+      //   if (currentPos > -440) {
+      //     currentPos --
+      //   }
+      //   else{
+      //     clearInterval(downInterval1)
+      //   }
+      // }
+      // deer1.style.bottom = currentPos+"px";
+      var disInterval = setInterval(function(){
+      if(deer1.style.visibility = "visible"){
+
+        setTimeout(function(){ deer1.style.visibility = "hidden"; });
+      }
+    },4000)
+
+        var reappear = setInterval(function(){
+          deer1.style.visibility = "visible";
+        },(Math.random() * 7000) + 3000);
+
+        // clearInterval()
+      // })
+    //   if(deer1.style.visibility = "hidden"){
+    //   setTimeout(function(){ deer1.style.visibility = "visible"; }, 1000);
+    // }
+
       }
       function move2() {
         var deer2 = document.getElementById("deer2");
@@ -51,49 +68,54 @@ document.addEventListener("DOMContentLoaded", function(event){
 
         bush2.className = "col-lg-1 col-md-1 col-sm-1 bush";
         deer2.className = "col-lg-1 col-md-1 col-sm-1 deer";
-        var speed = 0.5;
-        var currentPos = -480;
-        // Reset the element
-        deer2.style.bottom = 0+"px";
-        deer2.style.top = "auto";
-        var motionInterval2 = setInterval(function() {
-          currentPos += speed;
-          if (currentPos >= -450 && speed >= 0) {
-           currentPos = -450;
-           speed = -1 * speed;
-         }
-        if (currentPos <= -550 && speed < 0) {
-          currentPos = -550;
-          speed = -1 * speed;
-         }
 
-        deer2.style.bottom = currentPos+"px";
-      });
+        var currentPos = -480;
+        var upInterval1 = setInterval(up, 5);
+        function up(){
+
+          if (currentPos < -450) {
+            currentPos++
+          } else {
+            clearInterval(upInterval1);
+          }
+          deer2.style.bottom = currentPos+"px";
+        };
+        var disInterval = setInterval(function(){
+          if(deer2.style.visibility = "visible"){
+            setTimeout(function(){ deer2.style.visibility = "hidden"; });
+          }
+        },(Math.random() * 3000) + 1000)
+
+        var reappear = setInterval(function(){
+          deer2.style.visibility = "visible";
+        },(Math.random() * 7000) + 3000);
       }
+
+
       function move3() {
         var deer3 = document.getElementById("deer3");
         var bush3 = document.getElementById("bush3");
 
         bush3.className = "col-lg-1 col-md-1 col-sm-1 bush";
         deer3.className = "col-lg-1 col-md-1 col-sm-1 deer";
-        var speed = 0.5;
         var currentPos = -440;
-        // Reset the element
-        deer3.style.bottom = 0+"px";
-        deer3.style.top = "auto";
-        var motionInterval3 = setInterval(function() {
-          currentPos += speed;
-          if (currentPos >= -380 && speed >= 0) {
-           currentPos = -380;
-           speed = -1 * speed;
-         }
-        if (currentPos <= -480 && speed < 0) {
-          currentPos = -480;
-          speed = -1 * speed;
-         }
-
+        var upInterval1 = setInterval(up, 5);
+        function up(){
+          if (currentPos < -380) {
+            currentPos++
+          } else {
+            clearInterval(upInterval1);
+          }
         deer3.style.bottom = currentPos+"px";
-      });
+        };
+        var disInterval = setInterval(function(){
+          if(deer3.style.visibility = "visible"){
+            setTimeout(function(){ deer3.style.visibility = "hidden"; });
+          }
+        },(Math.random() * 3000) + 1000)
+        var reappear = setInterval(function(){
+          deer3.style.visibility = "visible";
+        },(Math.random() * 7000) + 3000);
       }
       function move4() {
         var deer4 = document.getElementById("deer4");
@@ -101,24 +123,26 @@ document.addEventListener("DOMContentLoaded", function(event){
 
         bush4.className = "col-lg-1 col-md-1 col-sm-1 bush";
         deer4.className = "col-lg-1 col-md-1 col-sm-1 deer";
-        var speed = 0.5;
         var currentPos = -270;
-        // Reset the element
-        deer4.style.bottom = 0+"px";
-        deer4.style.top = "auto";
-        var motionInterval4 = setInterval(function() {
-          currentPos += speed;
-          if (currentPos >= -200 && speed >= 0) {
-           currentPos = -200;
-           speed = -1 * speed;
-         }
-        if (currentPos <= -300 && speed < 0) {
-          currentPos = -300;
-          speed = -1 * speed;
-         }
+        var upInterval1 = setInterval(up, 5);
+        function up(){
 
+          if (currentPos < -200) {
+            currentPos++
+          } else {
+            clearInterval(upInterval1);
+          }
         deer4.style.bottom = currentPos+"px";
-      });
+        };
+        var disInterval = setInterval(function(){
+          if(deer4.style.visibility = "visible"){
+          setTimeout(function(){ deer4.style.visibility = "hidden"; });
+          }
+        },(Math.random() * 3000) + 1000)
+
+        var reappear = setInterval(function(){
+          deer4.style.visibility = "visible";
+        },(Math.random() * 7000) + 3000);
       }
       move1()
       move2()
