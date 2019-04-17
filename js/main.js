@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         var upInterval1 = setInterval(up, 5);
         function up(){
 
-          if (currentPos < 50) {
+          if (currentPos < 80) {
             currentPos++
           } else {
             clearInterval(upInterval1);
