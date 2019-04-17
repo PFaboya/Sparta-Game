@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function(event){
     scrn.style.cursor = "crosshair";
     scrn.addEventListener("click",function(){
       var audio = new Audio();
-      audio.src = "sounds/Winchester12-RA_The_Sun_God-1722751268.mp3"; 
+      audio.src = "sounds/Winchester12-RA_The_Sun_God-1722751268.mp3";
       audio.play();
     })
     for (var i = 0; i < deer.length; i++) {
