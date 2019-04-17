@@ -239,6 +239,16 @@ document.addEventListener("DOMContentLoaded", function(event){
         var reappear = setInterval(function(){
           event.target.style.visibility = "visible";
         }, (Math.random() * 10000) + 3000);
+        highscore = localStorage.getItem("highscore");
+
+        if(highscore != null){
+          if (points > highscore) {
+            localStorage.setItem("highscore", points+10);
+          }
+        }
+          else{
+            localStorage.setItem("highscore", points+10);
+          }
       })
     }
   }
@@ -254,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         timeleft -= 1;
         if(timeleft == 0){
           var endGame = document.getElementById("game-screen");
-          endGame.innerHTML = "Time is Up Your Score is " + points;
+          endGame.innerHTML = "Time is Up Your Score is " + points + " current Highscore is " + highscore;
           endGame.style.color = "red";
           endGame.style.fontSize = "90px";
           var res = document.getElementsByClassName("again")[0];
@@ -267,6 +277,9 @@ document.addEventListener("DOMContentLoaded", function(event){
       }, 1000)
     })
   }
+
+
+
 
 
   startGame()
