@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
         deer1.style.bottom = currentPos+"px";
         // setTimeout(function(){deer1.style.visibility = "hidden"}, 2000)
-      };
+        };
       // var downInterval1 = setInterval(down, 2);
       // function down(){
       //   if (currentPos > -440) {
@@ -45,13 +45,12 @@ document.addEventListener("DOMContentLoaded", function(event){
       // }
       // deer1.style.bottom = currentPos+"px";
       setTimeout(function(){
-      var disInterval = setInterval(function(){
-      if(deer1.style.visibility = "visible"){
-
-         deer1.style.visibility = "hidden";
-      }
-    }, 1000)
-  }, 1000)
+        var disInterval = setInterval(function(){
+          if(deer1.style.visibility = "visible"){
+            deer1.style.visibility = "hidden";
+          }
+        }, 1000)
+      }, 1000)
 
         var reappear = setInterval(function(){
           deer1.style.visibility = "visible";
@@ -74,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function(event){
         var currentPos = -480;
         var upInterval1 = setInterval(up, 5);
         function up(){
-
           if (currentPos < -450) {
             currentPos++
           } else {
@@ -83,20 +81,16 @@ document.addEventListener("DOMContentLoaded", function(event){
           deer2.style.bottom = currentPos+"px";
         };
         setTimeout(function(){
-        var disInterval = setInterval(function(){
-          if(deer2.style.visibility = "visible"){
-
-            deer2.style.visibility = "hidden";
-          }
-        },(Math.random() * 3000) + 1000)
-      }, 1000);
-
-        var reappear = setInterval(function(){
-          deer2.style.visibility = "visible";
-        },(Math.random() * 7000) + 3000);
-      }
-
-
+          var disInterval = setInterval(function(){
+            if(deer2.style.visibility = "visible"){
+              deer2.style.visibility = "hidden";
+            }
+          },(Math.random() * 3000) + 1000)
+        }, 1000);
+          var reappear = setInterval(function(){
+            deer2.style.visibility = "visible";
+          },(Math.random() * 7000) + 3000);
+        }
       function move3() {
         var deer3 = document.getElementById("deer3");
         var bush3 = document.getElementById("bush3");
@@ -114,15 +108,15 @@ document.addEventListener("DOMContentLoaded", function(event){
         deer3.style.bottom = currentPos+"px";
         };
         setTimeout(function(){
-        var disInterval = setInterval(function(){
-          if(deer3.style.visibility = "visible"){
-             deer3.style.visibility = "hidden";
-          }
-        },(Math.random() * 3000) + 1000)
-        var reappear = setInterval(function(){
-          deer3.style.visibility = "visible";
-        },(Math.random() * 7000) + 3000);
-      }, 1000);
+          var disInterval = setInterval(function(){
+            if(deer3.style.visibility = "visible"){
+              deer3.style.visibility = "hidden";
+            }
+          },(Math.random() * 3000) + 1000)
+          var reappear = setInterval(function(){
+            deer3.style.visibility = "visible";
+          },(Math.random() * 7000) + 3000);
+        }, 1000);
       }
       function move4() {
         var deer4 = document.getElementById("deer4");
@@ -133,21 +127,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         var currentPos = -270;
         var upInterval1 = setInterval(up, 5);
         function up(){
-
           if (currentPos < -200) {
             currentPos++
           } else {
             clearInterval(upInterval1);
           }
-        deer4.style.bottom = currentPos+"px";
+          deer4.style.bottom = currentPos+"px";
         };
         setTimeout(function(){
-        var disInterval = setInterval(function(){
-          if(deer4.style.visibility = "visible"){
-          deer4.style.visibility = "hidden";
-          }
-        },(Math.random() * 3000) + 1000)
-      }, 1000);
+          var disInterval = setInterval(function(){
+            if(deer4.style.visibility = "visible"){
+              deer4.style.visibility = "hidden";
+            }
+          },(Math.random() * 3000) + 1000)
+        }, 1000);
 
         var reappear = setInterval(function(){
           deer4.style.visibility = "visible";
@@ -162,21 +155,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         var currentPos = -140;
         var upInterval1 = setInterval(up, 5);
         function up(){
-
           if (currentPos < 80) {
             currentPos++
           } else {
             clearInterval(upInterval1);
           }
-        deer5.style.right = currentPos+"px";
+          deer5.style.right = currentPos+"px";
         };
         setTimeout(function(){
-        var disInterval = setInterval(function(){
-          if(deer5.style.visibility = "visible"){
-          deer5.style.visibility = "hidden";
-          }
-        },(Math.random() * 3000) + 1000)
-      }, 1000);
+          var disInterval = setInterval(function(){
+            if(deer5.style.visibility = "visible"){
+              deer5.style.visibility = "hidden";
+            }
+          },(Math.random() * 3000) + 1000)
+        }, 1000);
 
         var reappear = setInterval(function(){
           deer5.style.visibility = "visible";
@@ -191,21 +183,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         var currentPos = -490;
         var upInterval1 = setInterval(up, 5);
         function up(){
-
-          if (currentPos < -300) {
+          if (currentPos < -270) {
             currentPos++
           } else {
             clearInterval(upInterval1);
           }
-        deer6.style.right = currentPos+"px";
+          deer6.style.right = currentPos+"px";
         };
         setTimeout(function(){
-        var disInterval = setInterval(function(){
-          if(deer6.style.visibility = "visible"){
-           deer6.style.visibility = "hidden";
-          }
-        },(Math.random() * 3000) + 1000)
-      }, 1000);
+          var disInterval = setInterval(function(){
+            if(deer6.style.visibility = "visible"){
+              deer6.style.visibility = "hidden";
+            }
+          },(Math.random() * 3000) + 1000)
+        }, 1000);
 
         var reappear = setInterval(function(){
           deer6.style.visibility = "visible";
@@ -239,19 +230,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         var reappear = setInterval(function(){
           event.target.style.visibility = "visible";
         }, (Math.random() * 10000) + 3000);
-        highscore = localStorage.getItem("highscore");
-
-        if(highscore != null){
-          if (points > highscore) {
-            localStorage.setItem("highscore", points+10);
-          }
-        }
-          else{
-            localStorage.setItem("highscore", points+10);
-          }
       })
     }
   }
+  // highscore = localStorage.getItem("highscore");
+  //
+  // if(highscore !== null){
+  //   if (points > highscore) {
+  //     localStorage.setItem("highscore", points + 10);
+  //   }
+  // }
+  // else{
+  //   localStorage.setItem("highscore", points + 10);
+  // }
+  // console.log(highscore)
 
   function countDown(){
     var button = document.getElementById("start")
@@ -264,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         timeleft -= 1;
         if(timeleft == 0){
           var endGame = document.getElementById("game-screen");
-          endGame.innerHTML = "Time is Up Your Score is " + points + " current Highscore is " + highscore;
+          endGame.innerHTML = "Time is Up Your Score is " + points
           endGame.style.color = "red";
           endGame.style.fontSize = "90px";
           var res = document.getElementsByClassName("again")[0];
