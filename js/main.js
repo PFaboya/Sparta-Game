@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function(event){
   function startGame(){
     var button = document.getElementById("start");
     button.addEventListener("click", function(){
+      var audio = new Audio();
+      audio.src = "sounds/rainforest.mp3";
+      setInterval(replay, 1);
+      function replay(){
+        audio.play();
+      }
       document.getElementsByClassName("menu")[0].innerHTML = ""
       var heading = document.getElementsByTagName("h2")
       for (var i = 0; i < heading.length; i++) {
@@ -11,28 +17,17 @@ document.addEventListener("DOMContentLoaded", function(event){
       function move1() {
         var deer1 = document.getElementById("deer1");
         var bush1 = document.getElementById("bush1");
-        // var elem = document.getElementById("deer1");
         bush1.className = "col-lg-1 col-md-1 col-sm-1 bush";
         deer1.className = "col-lg-1 col-md-1 col-sm-1 deer";
-        // var speed = 1;
-        // Reset the element
-        // deer1.style.bottom = 0+"px";
-        // deer1.style.top = "auto";
         var currentPos = -440;
         var upInterval1 = setInterval(up, 5);
         function up(){
-          // currentPos += 1;
-
           if (currentPos < -340) {
-            // currentPos = -340;
             currentPos++
           } else {
             clearInterval(upInterval1);
           }
-
-
-        deer1.style.bottom = currentPos+"px";
-        // setTimeout(function(){deer1.style.visibility = "hidden"}, 2000)
+          deer1.style.bottom = currentPos+"px";
         };
       // var downInterval1 = setInterval(down, 2);
       // function down(){
@@ -49,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event){
           if(deer1.style.visibility = "visible"){
             deer1.style.visibility = "hidden";
           }
-        }, 1000)
+        }, (Math.random() * 3000) + 1000)
       }, 1000)
 
         var reappear = setInterval(function(){
@@ -87,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function(event){
             }
           },(Math.random() * 3000) + 1000)
         }, 1000);
+
           var reappear = setInterval(function(){
             deer2.style.visibility = "visible";
           },(Math.random() * 7000) + 3000);
@@ -105,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(event){
           } else {
             clearInterval(upInterval1);
           }
-        deer3.style.bottom = currentPos+"px";
+          deer3.style.bottom = currentPos+"px";
         };
         setTimeout(function(){
           var disInterval = setInterval(function(){
@@ -113,11 +109,12 @@ document.addEventListener("DOMContentLoaded", function(event){
               deer3.style.visibility = "hidden";
             }
           },(Math.random() * 3000) + 1000)
+        }, 1000);
+
           var reappear = setInterval(function(){
             deer3.style.visibility = "visible";
           },(Math.random() * 7000) + 3000);
-        }, 1000);
-      }
+        }
       function move4() {
         var deer4 = document.getElementById("deer4");
         var bush4 = document.getElementById("bush4");
@@ -233,17 +230,7 @@ document.addEventListener("DOMContentLoaded", function(event){
       })
     }
   }
-  // highscore = localStorage.getItem("highscore");
-  //
-  // if(highscore !== null){
-  //   if (points > highscore) {
-  //     localStorage.setItem("highscore", points + 10);
-  //   }
-  // }
-  // else{
-  //   localStorage.setItem("highscore", points + 10);
-  // }
-  // console.log(highscore)
+
 
   function countDown(){
     var button = document.getElementById("start")
@@ -257,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         if(timeleft == 0){
           var endGame = document.getElementById("game-screen");
           endGame.innerHTML = "Time is Up Your Score is " + points
-          endGame.style.color = "red";
+          endGame.style.color = "black";
           endGame.style.fontSize = "90px";
           var res = document.getElementsByClassName("again")[0];
           res.className = "col-lg-6 col-md-6 text-center again";
@@ -270,7 +257,17 @@ document.addEventListener("DOMContentLoaded", function(event){
     })
   }
 
-
+  // highscore = localStorage.getItem("highscore");
+  //
+  // if(highscore !== null){
+  //   if (points > highscore) {
+  //     localStorage.setItem("highscore", points + 10);
+  //   }
+  // }
+  // else{
+  //   localStorage.setItem("highscore", points + 10);
+  // }
+  // console.log(highscore)
 
 
 
