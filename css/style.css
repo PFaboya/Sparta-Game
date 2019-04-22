@@ -1,0 +1,127 @@
+body{
+  background-image: url(../images/forest.jpg);
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+}
+
+#game-screen{
+  height: 700px;
+  background-image: linear-gradient(to bottom, lightblue 30%, green);
+}
+
+.deer{
+  background-image:url(../images/deer.gif);
+  background-size: cover;
+  background-position: center;
+  height:100px;
+}
+
+#deer1{
+  position: relative;
+  left: 750px;
+}
+
+#deer2{
+  position: relative;
+  left:200px;
+}
+
+#deer3{
+  position: relative;
+  left: 750px;
+}
+
+#deer4{
+  position: relative;
+  left: -200px;
+}
+
+#deer5{
+  position: relative;
+  top:340px;
+}
+
+#deer6{
+  position: relative;
+  top: 240px;
+}
+
+.bush{
+  background-image: url(../images/bush.png);
+  background-size: cover;
+  background-position: center;
+  height:120px;
+  width:150px;
+}
+
+.tree{
+  background-image: url(../images/tree.jpg);
+  background-size: cover;
+  background-position: center;
+  height:300px;
+  width:350px;
+}
+
+#bush1{
+  position:relative;
+  top: 420px;
+  left: 140px;
+}
+
+#bush2{
+  position: relative;
+  top:530px;
+  left:-450px;
+}
+
+#bush3{
+  position: relative;
+  top: 460px;
+  left: 50px;
+}
+
+#bush4{
+  position: relative;
+  top: 165px;
+  left: 70px;
+}
+
+#tree5{
+  position: relative;
+  left: 250px;
+  top:50px;
+}
+
+#tree6{
+  position: relative;
+  left: 350px;
+  top: -50px;
+}
+
+.menu, .player-Info{
+  background-color: green;
+}
+
+.menu{
+  height:76px;
+}
+
+#start{
+  background-color: lightgreen;
+}
+
+.again{
+  background-color: green;
+  height: 76px;
+}
+
+#reset{
+  background-color: lightgreen;
+}
+
+.player-Info{
+  font-size: 20px;
+}
