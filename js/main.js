@@ -29,16 +29,6 @@ document.addEventListener("DOMContentLoaded", function(event){
           }
           deer1.style.bottom = currentPos+"px";
         };
-      // var downInterval1 = setInterval(down, 2);
-      // function down(){
-      //   if (currentPos > -440) {
-      //     currentPos --
-      //   }
-      //   else{
-      //     clearInterval(downInterval1)
-      //   }
-      // }
-      // deer1.style.bottom = currentPos+"px";
       setTimeout(function(){
         var disInterval = setInterval(function(){
           if(deer1.style.visibility = "visible"){
@@ -50,13 +40,6 @@ document.addEventListener("DOMContentLoaded", function(event){
         var reappear = setInterval(function(){
           deer1.style.visibility = "visible";
         },(Math.random() * 7000) + 3000);
-
-        // clearInterval()
-      // })
-    //   if(deer1.style.visibility = "hidden"){
-    //   setTimeout(function(){ deer1.style.visibility = "visible"; }, 1000);
-    // }
-
       }
       function move2() {
         var deer2 = document.getElementById("deer2");
@@ -243,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         timeleft -= 1;
         if(timeleft == 0){
           var endGame = document.getElementById("game-screen");
-          endGame.innerHTML = "Time is Up Your Score is " + points
+          endGame.innerHTML = "Time's Up Your Score is " + points
           endGame.style.color = "black";
           endGame.style.fontSize = "90px";
           var res = document.getElementsByClassName("again")[0];
@@ -256,20 +239,6 @@ document.addEventListener("DOMContentLoaded", function(event){
       }, 1000)
     })
   }
-
-  // highscore = localStorage.getItem("highscore");
-  //
-  // if(highscore !== null){
-  //   if (points > highscore) {
-  //     localStorage.setItem("highscore", points + 10);
-  //   }
-  // }
-  // else{
-  //   localStorage.setItem("highscore", points + 10);
-  // }
-  // console.log(highscore)
-
-
 
   startGame()
   mouseClick()
